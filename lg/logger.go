@@ -54,15 +54,15 @@ func Init(Level debugLevel, showFileName bool) (err error) {
 	}
 
 	if Level&INFO_LEVEL > 0 {
-		Info = log.New(os.Stdout, "[INFO ] ", flag)
+		Info = log.New(os.Stdout, "[INFO]  ", flag)
 	} else {
-		Info = log.New(devNull, "[INFO ] ", 0)
+		Info = log.New(devNull, "[INFO]  ", 0)
 	}
 
 	if Level&WARN_LEVEL > 0 {
-		Warn = log.New(os.Stdout, "[WARN ] ", flag)
+		Warn = log.New(os.Stdout, "[WARN]  ", flag)
 	} else {
-		Warn = log.New(devNull, "[WARN ] ", 0)
+		Warn = log.New(devNull, "[WARN]  ", 0)
 	}
 
 	if Level&ERROR_LEVEL > 0 {
